@@ -1,0 +1,24 @@
+apply plugin: "java-library"
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+	maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+	maven { url "https://jitpack.io" }
+}
+
+version = "1.6.1"
+
+sourceCompatibility = 8
+targetCompatibility = 8
+
+ext {
+	gdxVersion = "1.11.0"
+	guacamoleVersion = "0.3.2"
+}
+
+dependencies {
+	implementation "com.github.crykn.guacamole:gdx:$guacamoleVersion"
+	implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+}
